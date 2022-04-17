@@ -32,6 +32,7 @@
 import Form from 'vform'
 
 export default {
+  layout: 'auth',
   data: () => ({
     status: '',
     form: new Form({
