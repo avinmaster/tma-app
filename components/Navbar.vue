@@ -1,42 +1,25 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
-        {{ appName }}
-      </router-link>
+    <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
+      {{ appName }}
+    </router-link>
 
-      <button :aria-label="$t('toggle_navigation')" class="navbar-toggler" type="button"
-              data-toggle="collapse" data-target="#navbarToggler"
-              aria-controls="navbarToggler" aria-expanded="false"
-      >
-        <span class="navbar-toggler-icon" />
-      </button>
-
-      <div id="navbarToggler" class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-          <locale-dropdown />
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li> -->
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-          <!-- Guest -->
-          <template v-if="!user">
-            <li class="nav-item">
-              <router-link :to="{ name: 'login' }" class="nav-link" active-class="active">
-                {{ $t('login') }}
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
-                {{ $t('register') }}
-              </router-link>
-            </li>
-          </template>
-        </ul>
-      </div>
-    </div>
+    <ul class="navbar-nav ml-auto">
+      <!-- Guest -->
+      <template v-if="!user">
+        <li class="nav-item">
+          <router-link :to="{ name: 'login' }" class="nav-link" active-class="active">
+            {{ $t('login') }}
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
+            {{ $t('register') }}
+          </router-link>
+        </li>
+      </template>
+      <locale-dropdown />
+    </ul>
   </nav>
 </template>
 
@@ -55,17 +38,7 @@ export default {
 
   computed: mapGetters({
     user: 'auth/user'
-  }),
-
-  methods: {
-    async logout () {
-      // Log out the user.
-      await this.$store.dispatch('auth/logout')
-
-      // Redirect to log in page.
-      await this.$router.push({ name: 'login' })
-    }
-  }
+  })
 }
 </script>
 
@@ -77,6 +50,12 @@ export default {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
   box-shadow: none;
+  background: #fff;
+  padding: 0 50px;
 }
 </style>

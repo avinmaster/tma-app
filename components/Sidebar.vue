@@ -71,9 +71,6 @@ export default {
 
 <style scoped lang="scss">
 .main-sidebar {
-  bottom: 0;
-  height: 100vh;
-  border-radius: 8px;
   width: 300px;
   background: #fff;
   overflow-y: auto;

@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  layout: 'auth',
+  layout: 'no-sidebar',
   middleware: 'auth',
 
   computed: {

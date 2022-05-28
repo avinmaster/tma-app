@@ -2,9 +2,9 @@
   <div class="layout">
     <navbar />
 
-    <div class="container mt-4">
+    <main class="container content">
       <nuxt />
-    </div>
+    </main>
   </div>
 </template>
 
@@ -17,3 +17,15 @@ export default {
   }
 }
 </script>
+
+<style>
+.layout {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 55px;
+}
+
+.content {
+  width: 100%;
+}
+</style>
