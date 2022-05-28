@@ -1,11 +1,11 @@
 <template>
   <div class="layout">
-    <navbar />
+    <sidebar />
 
-    <div class="container mt-4">
-      <sidebar />
+    <main class="content">
+      <navbar />
       <nuxt />
-    </div>
+    </main>
   </div>
 </template>
 
@@ -20,3 +20,14 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  width: 100%;
+}
+</style>

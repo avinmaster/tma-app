@@ -4,6 +4,9 @@
     <router-link to="/timers">
       Timers
     </router-link>
+    <card>
+      HEHE
+    </card>
   </div>
 </template>
 

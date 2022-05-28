@@ -1,9 +1,17 @@
 @import 'variables';
 @import '~bootstrap/scss/bootstrap';
 @import '~sweetalert2/src/sweetalert2';
-@import '~@fortawesome/fontawesome-svg-core/styles';
+//@import '~@fortawesome/fontawesome-svg-core/styles';
 
 @import 'elements/card';
 @import 'elements/navbar';
 @import 'elements/buttons';
 @import 'elements/transitions';
+
+body {
+  font: bolder 16px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+  list-style: none;
+}

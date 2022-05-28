@@ -42,7 +42,7 @@ module.exports = {
     '~plugins/i18n',
     '~plugins/vform',
     '~plugins/axios',
-    '~plugins/fontawesome',
+    // '~plugins/fontawesome',
     '~plugins/nuxt-client-init',
     { src: '~plugins/bootstrap', mode: 'client' }
   ],

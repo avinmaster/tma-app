@@ -1,21 +1,24 @@
 <template>
-  <div class="card">
-    <div v-if="title" class="card-header">
-      {{ title }}
-    </div>
-
-    <div class="card-body">
-      <slot />
-    </div>
+  <div class="custom-card" :style="{ backgroundColor: color, boxShadow: `0 7px 20px ${color}02` }">
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
   name: 'Card',
-
   props: {
-    title: { type: String, default: null }
+    color: {
+      type: String,
+      default: '#ffffff'
+    }
   }
 }
 </script>
+
+<style scoped>
+.custom-card {
+  border-radius: 20px;
+  padding: 25px;
+}
+</style>
