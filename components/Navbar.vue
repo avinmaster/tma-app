@@ -8,12 +8,12 @@
       <!-- Guest -->
       <template v-if="!user">
         <li class="nav-item">
-          <router-link :to="{ name: 'login' }" class="nav-link" active-class="active">
+          <router-link :to="{ name: 'login' }" active-class="active">
             {{ $t('login') }}
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'register' }" class="nav-link" active-class="active">
+          <router-link :to="{ name: 'register' }" active-class="active">
             {{ $t('register') }}
           </router-link>
         </li>
@@ -21,7 +21,7 @@
       <locale-dropdown />
       <li class="nav-item">
         <div v-if="user" class="bottom-nav dropdown">
-          <a class="nav-link dropdown-toggle text-dark"
+          <a class="dropdown-toggle"
              href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
           >
             <img :src="user.photo_url" class="rounded-circle profile-photo mr-1">
@@ -83,5 +83,10 @@ export default {
   height: 55px;
   box-shadow: none;
   padding: 0 50px;
+}
+
+.dropdown-menu {
+  right: 0 !important;
+  left: unset !important;
 }
 </style>
