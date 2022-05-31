@@ -50,7 +50,7 @@
 import Form from 'vform'
 
 export default {
-  layout: 'auth',
+  layout: 'no-sidebar',
   middleware: 'guest',
 
   data: () => ({

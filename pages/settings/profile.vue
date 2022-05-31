@@ -38,6 +38,9 @@ import Form from 'vform'
 import { mapGetters } from 'vuex'
 
 export default {
+  layout: 'no-sidebar',
+  middleware: 'auth',
+
   scrollToTop: false,
 
   data: () => ({

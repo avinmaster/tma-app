@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light">
-    <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
+    <router-link :to="{ name: user ? 'home' : 'welcome' }">
       {{ appName }}
     </router-link>
 
@@ -19,6 +19,25 @@
         </li>
       </template>
       <locale-dropdown />
+      <li class="nav-item">
+        <div v-if="user" class="bottom-nav dropdown">
+          <a class="nav-link dropdown-toggle text-dark"
+             href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          >
+            <img :src="user.photo_url" class="rounded-circle profile-photo mr-1">
+            {{ user.name }}
+          </a>
+          <div class="dropdown-menu">
+            <router-link :to="{ name: 'settings.profile' }" class="dropdown-item pl-3">
+              {{ $t('settings') }}
+            </router-link>
+            <div class="dropdown-divider" />
+            <a class="dropdown-item pl-3" href="#" @click.prevent="logout">
+              {{ $t('logout') }}
+            </a>
+          </div>
+        </div>
+      </li>
     </ul>
   </nav>
 </template>
@@ -38,7 +57,17 @@ export default {
 
   computed: mapGetters({
     user: 'auth/user'
-  })
+  }),
+
+  methods: {
+    async logout () {
+      // Log out the user.
+      await this.$store.dispatch('auth/logout')
+
+      // Redirect to log in page.
+      await this.$router.push({ name: 'login' })
+    }
+  }
 }
 </script>
 
@@ -50,12 +79,9 @@ export default {
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
   width: 100%;
   height: 55px;
   box-shadow: none;
-  background: #fff;
   padding: 0 50px;
 }
 </style>

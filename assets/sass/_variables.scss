@@ -1,5 +1,27 @@
-// // Body
-$body-bg: #f7f9fb;
+:root {
+  --text-primary-color: #3c3f50;
+  --text-secondary-color: #c5aca2;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f2f3f5;
+  --bg-panel: #fcfcfc;
+  --text-secondary-shadow-color: rgba(202, 183, 176, 0.3);
+  --text-primary-shadow-color: rgba(0, 0, 0, .2);
+  --mask-bg-color: none;
+}
+
+:root.dark {
+  --text-primary-color: #d4d4d4;
+  --text-secondary-color: #c19887;
+  --bg-primary: #0E1216;
+  --bg-secondary: #080A0B;
+  --bg-panel: #1A1C1E;
+  --text-secondary-shadow-color: rgba(0, 0, 0, .18);
+  --text-primary-shadow-color: rgba(202, 183, 176, 0.3);
+  --mask-bg-color: rgba(0, 0, 0, 0.81)
+}
+
+// Body
+$body-bg: var(--bg-secondary);
 
 // Cards
 $card-spacer-x: 0.9375rem;

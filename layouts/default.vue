@@ -1,9 +1,9 @@
 <template>
   <div class="layout">
-    <navbar />
     <sidebar />
 
     <main class="content">
+      <navbar />
       <nuxt />
     </main>
   </div>
@@ -25,7 +25,6 @@ export default {
 .layout {
   display: flex;
   min-height: 100vh;
-  padding-top: 55px;
 }
 
 .content {

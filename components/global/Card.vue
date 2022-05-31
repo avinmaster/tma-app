@@ -1,18 +1,12 @@
 <template>
-  <div class="custom-card" :style="{ backgroundColor: color, boxShadow: `0 7px 20px ${color}02` }">
+  <div class="custom-card">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Card',
-  props: {
-    color: {
-      type: String,
-      default: '#ffffff'
-    }
-  }
+  name: 'Card'
 }
 </script>
 
@@ -20,5 +14,6 @@ export default {
 .custom-card {
   border-radius: 20px;
   padding: 25px;
+  background: var(--bg-panel);
 }
 </style>

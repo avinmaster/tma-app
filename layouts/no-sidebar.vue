@@ -20,9 +20,7 @@ export default {
 
 <style>
 .layout {
-  display: flex;
   min-height: 100vh;
-  padding-top: 55px;
 }
 
 .content {

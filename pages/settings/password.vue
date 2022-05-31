@@ -37,6 +37,9 @@
 import Form from 'vform'
 
 export default {
+  layout: 'no-sidebar',
+  middleware: 'auth',
+
   scrollToTop: false,
 
   data: () => ({
