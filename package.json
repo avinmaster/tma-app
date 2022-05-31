@@ -22,7 +22,8 @@
     "popper.js": "^1.16.1",
     "sweetalert2": "^10.10.4",
     "vform": "^1.0.1",
-    "vue-i18n": "^8.22.2"
+    "vue-i18n": "^8.22.2",
+    "vue-unicons": "^3.3.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.12.1",

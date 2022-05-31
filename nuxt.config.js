@@ -44,7 +44,8 @@ module.exports = {
     '~plugins/axios',
     // '~plugins/fontawesome',
     '~plugins/nuxt-client-init',
-    { src: '~plugins/bootstrap', mode: 'client' }
+    { src: '~plugins/bootstrap', mode: 'client' },
+    { src: '~/plugins/vue-unicons', mode: 'client' }
   ],
 
   modules: [

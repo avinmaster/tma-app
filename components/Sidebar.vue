@@ -1,8 +1,10 @@
 <template>
   <div class="main-sidebar">
-    <div class="menu"></div>
+    <div class="menu">
+      <unicon name="car-wash" />
+    </div>
     <div class="bottom-menu">
-      <theme-switcher></theme-switcher>
+      <theme-switcher />
     </div>
   </div>
 </template>
@@ -10,6 +12,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import ThemeSwitcher from '@/components/theme-switcher'
+
 export default {
   name: 'Sidebar',
   components: {
