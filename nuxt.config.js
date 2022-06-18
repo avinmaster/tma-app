@@ -34,7 +34,7 @@ module.exports = {
   },
 
   css: [
-    { src: '~assets/sass/app.scss', lang: 'scss' }
+    { src: '~assets/styles/app.scss', lang: 'scss' }
   ],
 
   plugins: [
@@ -45,7 +45,7 @@ module.exports = {
     // '~plugins/fontawesome',
     '~plugins/nuxt-client-init',
     { src: '~plugins/bootstrap', mode: 'client' },
-    { src: '~/plugins/vue-unicons', mode: 'client' }
+    { src: '~plugins/theme-switch', mode: 'client' }
   ],
 
   modules: [

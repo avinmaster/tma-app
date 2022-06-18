@@ -8,9 +8,23 @@
 @import 'elements/buttons';
 @import 'elements/transitions';
 
+@import 'pe-icon-7-stroke';
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 body {
   font: bolder 16px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-primary-color);
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 li {
